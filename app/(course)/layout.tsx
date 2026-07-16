@@ -9,11 +9,7 @@ import { getSidebarSections } from "@/lib/content";
 // The documentation shell shared by every chapter: a persistent left rail on
 // desktop, a fixed bottom tray on mobile. The per-chapter body and the "On this
 // page" rail are rendered by the page itself, inside `children`.
-export default function CourseLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function CourseLayout({ children }: { children: React.ReactNode }) {
   const sections = getSidebarSections();
 
   return (
@@ -21,10 +17,7 @@ export default function CourseLayout({
       {/* Desktop chapter rail */}
       <aside className="sticky top-0 hidden h-dvh w-72 shrink-0 flex-col lg:flex">
         <div className="flex items-center justify-between py-5 pl-6 pr-4">
-          <Link
-            href="/"
-            className="flex items-center gap-2 text-base font-semibold text-brand-ink"
-          >
+          <Link href="/" className="flex items-center gap-2 text-base font-semibold text-brand-ink">
             <BookOpen className="size-5 text-brand" />
             Fuel Lab
           </Link>

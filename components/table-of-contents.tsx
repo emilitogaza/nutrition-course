@@ -35,9 +35,7 @@ export function TableOfContents({ headings }: { headings: Heading[] }) {
 
   return (
     <nav aria-label="On this page" className="flex flex-col gap-2 text-sm">
-      <p className="mb-1 pl-2 text-xs font-semibold uppercase text-ink/50">
-        On this page
-      </p>
+      <p className="mb-1 pl-2 text-xs font-semibold uppercase text-ink/50">On this page</p>
       <ul className="flex flex-col gap-1">
         {headings.map((heading) => (
           <li key={heading.id}>

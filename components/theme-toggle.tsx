@@ -34,7 +34,7 @@ export function ThemeToggle({ className }: { className?: string }) {
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
       className={cn(
         "inline-flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-2 text-ink/70 transition-colors hover:bg-fill-raised hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand",
-        className,
+        className
       )}
     >
       <Sun className="size-5 dark:hidden" />

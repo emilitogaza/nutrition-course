@@ -27,10 +27,7 @@ export function MobileNav({ sections }: { sections: ChapterSection[] }) {
   // Captured once per mount, before the effect below advances the module value.
   const prevProgress = useRef(lastProgress);
 
-  const chapters = useMemo(
-    () => sections.flatMap((s) => s.chapters),
-    [sections]
-  );
+  const chapters = useMemo(() => sections.flatMap((s) => s.chapters), [sections]);
   const index = chapters.findIndex((c) => `/${c.slug}` === pathname);
   const current = index === -1 ? null : chapters[index];
   const progress = index === -1 ? 0 : ((index + 1) / chapters.length) * 100;
@@ -122,10 +119,7 @@ export function MobileNav({ sections }: { sections: ChapterSection[] }) {
                   </button>
                 </div>
                 <div className="max-h-[55dvh] overflow-y-auto overscroll-contain px-2 py-4">
-                  <CourseSidebar
-                    sections={sections}
-                    onNavigate={() => setOpen(false)}
-                  />
+                  <CourseSidebar sections={sections} onNavigate={() => setOpen(false)} />
                 </div>
               </m.div>
             )}
@@ -164,10 +158,7 @@ export function MobileNav({ sections }: { sections: ChapterSection[] }) {
               <span className="min-w-0 flex-1 truncate text-sm text-ink">
                 {current?.title ?? "Course chapters"}
               </span>
-              <m.span
-                animate={{ rotate: open ? 180 : 0 }}
-                className="inline-flex shrink-0"
-              >
+              <m.span animate={{ rotate: open ? 180 : 0 }} className="inline-flex shrink-0">
                 <ChevronUp className="size-5 text-ink/70" />
               </m.span>
             </button>

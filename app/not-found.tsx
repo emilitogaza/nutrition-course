@@ -6,9 +6,7 @@ export default function NotFound() {
   return (
     <div className="mx-auto flex max-w-md flex-1 flex-col items-center justify-center gap-4 px-6 py-24 text-center">
       <p className="text-sm font-semibold uppercase text-brand">404</p>
-      <h1 className="text-2xl font-semibold text-brand-ink">
-        Chapter not found
-      </h1>
+      <h1 className="text-2xl font-semibold text-brand-ink">Chapter not found</h1>
       <p className="text-ink/70">
         That page doesn&apos;t exist. Head back to the start of the course.
       </p>

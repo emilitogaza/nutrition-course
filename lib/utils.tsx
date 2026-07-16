@@ -1,10 +1,4 @@
-export type ClassValue =
-  | string
-  | number
-  | null
-  | false
-  | undefined
-  | ClassValue[];
+export type ClassValue = string | number | null | false | undefined | ClassValue[];
 
 /**
  * Minimal class merger — flattens conditional class arrays into a single

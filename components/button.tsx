@@ -5,10 +5,8 @@ import { cn } from "@/lib/utils";
 const variantClasses = {
   default:
     "bg-brand text-brand-ink hover:bg-brand/90 focus-visible:outline-brand font-[580] outline-brand/0 outline-1 hover:outline-4 hover:outline-brand/20",
-  destructive:
-    "bg-error text-ink-flip hover:bg-error/90 focus-visible:outline-error",
-  outline:
-    "border border-brand text-brand hover:bg-brand/5 focus-visible:outline-brand",
+  destructive: "bg-error text-ink-flip hover:bg-error/90 focus-visible:outline-error",
+  outline: "border border-brand text-brand hover:bg-brand/5 focus-visible:outline-brand",
   secondary:
     "bg-fill-raised text-ink hover:bg-fill-raised/90 focus-visible:outline-fill-raised outline-fill-raised/0 outline-1 hover:outline-4 hover:outline-fill-raised/20",
   ghost: "text-ink hover:bg-fill-raised focus-visible:outline-brand",

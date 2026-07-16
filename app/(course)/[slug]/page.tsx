@@ -3,11 +3,7 @@ import { notFound } from "next/navigation";
 import { Markdown } from "@/components/markdown";
 import { Pager } from "@/components/pager";
 import { TableOfContents } from "@/components/table-of-contents";
-import {
-  getAllChapterMeta,
-  getChapter,
-  getChapterNeighbours,
-} from "@/lib/content";
+import { getAllChapterMeta, getChapter, getChapterNeighbours } from "@/lib/content";
 
 // Pre-render one static page per chapter at build time.
 export function generateStaticParams() {
@@ -17,9 +13,7 @@ export function generateStaticParams() {
 // Reject any slug that isn't a real chapter file → 404.
 export const dynamicParams = false;
 
-export async function generateMetadata({
-  params,
-}: PageProps<"/[slug]">): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps<"/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const chapter = getChapter(slug);
   if (!chapter) return {};
