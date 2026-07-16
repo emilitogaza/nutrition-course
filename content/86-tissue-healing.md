@@ -1,7 +1,7 @@
 ---
 title: How Tissue Heals — and How to Help It
 section: Injury & Resilience
-order: 135
+order: 148
 description: The three phases of healing, why inflammation isn't the enemy, how long each tissue takes, why loading is medicine, and the nutrition that genuinely supports repair.
 ---
 

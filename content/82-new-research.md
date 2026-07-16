@@ -1,7 +1,7 @@
 ---
 title: New Research & Open Questions
 section: Frontiers
-order: 140
+order: 165
 description: Time-restricted eating, personalised nutrition, protein pacing, and how to think critically about the next big headline.
 ---
 

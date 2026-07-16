@@ -1,7 +1,7 @@
 ---
 title: The Gut Microbiome
 section: Frontiers
-order: 130
+order: 160
 description: What the gut microbiome is, how it interacts with diet and athletic performance, and what's evidence vs hype.
 ---
 

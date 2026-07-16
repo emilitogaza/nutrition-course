@@ -32,7 +32,10 @@ research is still genuinely unsettled. Skip around — or read straight through.
   piling on fat
 - How to time and structure food around training, and why sleep and recovery are
   body-composition variables too
+- How endurance works — aerobic vs anaerobic, VO₂ max, and why your heart rate and
+  your breathing don't always agree
 - Where the general advice needs adjusting — for women, older, and young athletes
+- What actually happens when you get injured — how tissue heals, and how to help it
 - Where the frontier is: the gut microbiome, meal timing, and open questions
 
 ## How this course is organised

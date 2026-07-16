@@ -1,7 +1,7 @@
 ---
 title: Understanding Injury — A Field Guide
 section: Injury & Resilience
-order: 130
+order: 145
 description: The taxonomy of training injuries — acute vs overuse, the tissues involved, how strains and sprains are graded, why pain isn't the same as damage, and the red flags that mean "see someone now."
 ---
 
