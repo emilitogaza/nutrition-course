@@ -23,12 +23,16 @@ research is still genuinely unsettled. Skip around — or read straight through.
   true and incomplete
 - How much protein you really need, and why *amino acids* — not just grams — are
   the thing that matters
-- What carbohydrates and fats do for performance and hormones
+- What carbohydrates and fats do for performance and hormones — and where alcohol
+  fits
 - Which vitamins and minerals matter, when food beats supplements, and when it
   doesn't
 - The short list of supplements with real evidence — and the long list without
-- How to lose fat while holding onto muscle
-- How to time and structure food around training
+- How to lose fat while holding onto muscle — and how to build muscle without
+  piling on fat
+- How to time and structure food around training, and why sleep and recovery are
+  body-composition variables too
+- Where the general advice needs adjusting — for women, older, and young athletes
 - Where the frontier is: the gut microbiome, meal timing, and open questions
 
 ## How this course is organised

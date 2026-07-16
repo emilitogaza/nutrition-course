@@ -63,7 +63,7 @@ improving blood flow and making muscle contractions more **oxygen-efficient**.
 
 - **Benefit:** improved endurance and efficiency, most useful for recreational-to-
   trained athletes (elite responders vary).
-- **Dose:** ~**6–13 mmol (≈ 300–600 mg) nitrate**, ~2–3 hours before, or loaded
+- **Dose:** ~**6–13 mmol (≈ 370–800 mg) nitrate**, ~2–3 hours before, or loaded
   over several days. Avoid antibacterial mouthwash — it kills the oral bacteria
   that convert nitrate.
 
@@ -91,7 +91,7 @@ certification** (Informed Sport, NSF Certified for Sport).
 | **Creatine monohydrate** | Strength, power, muscle | 3–5 g/day |
 | **Caffeine** | Almost everything | 3–6 mg/kg pre-workout |
 | **Beta-alanine** | 1–4 min high-intensity | 3.2–6.4 g/day (chronic) |
-| **Nitrate / beetroot** | Endurance economy | ~300–600 mg, 2–3 h pre |
+| **Nitrate / beetroot** | Endurance economy | ~370–800 mg, 2–3 h pre |
 | **Bicarbonate** | High-intensity buffering | 0.2–0.3 g/kg pre |
 
 Creatine and caffeine are the two nearly everyone can benefit from; the rest are

@@ -18,7 +18,7 @@ Two scoring systems matter:
 - **PDCAAS** (Protein Digestibility-Corrected Amino Acid Score) — the older
   standard, capped at 1.0, which hides differences between very high-quality
   proteins and slightly overstates some plant proteins.
-- **DIAAS** (Digestible Indigestible Amino Acid Score) — the newer, more accurate
+- **DIAAS** (Digestible Indispensable Amino Acid Score) — the newer, more accurate
   FAO-recommended metric. It measures true digestibility at the end of the small
   intestine and isn't truncated at 1.0, so it separates the top proteins.
 
