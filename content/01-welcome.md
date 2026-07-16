@@ -30,6 +30,8 @@ research is still genuinely unsettled. Skip around — or read straight through.
 - The short list of supplements with real evidence — and the long list without
 - How to lose fat while holding onto muscle — and how to build muscle without
   piling on fat
+- How muscle actually grows and gets stronger — and the training principles that
+  drive it
 - How to time and structure food around training, and why sleep and recovery are
   body-composition variables too
 - How endurance works — aerobic vs anaerobic, VO₂ max, and why your heart rate and
