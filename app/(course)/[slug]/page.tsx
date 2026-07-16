@@ -13,7 +13,9 @@ export function generateStaticParams() {
 // Reject any slug that isn't a real chapter file → 404.
 export const dynamicParams = false;
 
-export async function generateMetadata({ params }: PageProps<"/[slug]">): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps<"/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const chapter = getChapter(slug);
   if (!chapter) return {};

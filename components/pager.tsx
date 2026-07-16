@@ -4,7 +4,13 @@ import type { ChapterMeta } from "@/lib/content";
 
 // Sequential "Previous / Next" navigation at the foot of every chapter.
 // Server-rendered — it only needs the neighbouring chapter metadata.
-export function Pager({ prev, next }: { prev: ChapterMeta | null; next: ChapterMeta | null }) {
+export function Pager({
+  prev,
+  next,
+}: {
+  prev: ChapterMeta | null;
+  next: ChapterMeta | null;
+}) {
   return (
     <nav
       aria-label="Chapter navigation"

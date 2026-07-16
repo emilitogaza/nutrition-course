@@ -39,7 +39,10 @@ export function Markdown({ children }: { children: string }) {
           />
         ),
         pre: (props) => (
-          <pre className="my-4 overflow-x-auto rounded-2 bg-fill-raised p-4 text-sm" {...props} />
+          <pre
+            className="my-4 overflow-x-auto rounded-2 bg-fill-raised p-4 text-sm"
+            {...props}
+          />
         ),
       }}
     >

@@ -21,7 +21,9 @@ export function CourseSidebar({
     <nav aria-label="Course chapters" className="flex flex-col gap-7">
       {sections.map((group) => (
         <div key={group.section} className="flex flex-col gap-1">
-          <p className="mb-1 px-3 text-xs font-semibold uppercase text-ink/50">{group.section}</p>
+          <p className="mb-1 px-3 text-xs font-semibold uppercase text-ink/50">
+            {group.section}
+          </p>
           <ul className="flex flex-col gap-0.5">
             {group.chapters.map((chapter) => {
               const href = `/${chapter.slug}`;

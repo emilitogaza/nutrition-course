@@ -158,7 +158,10 @@ export function MobileNav({ sections }: { sections: ChapterSection[] }) {
               <span className="min-w-0 flex-1 truncate text-sm text-ink">
                 {current?.title ?? "Course chapters"}
               </span>
-              <m.span animate={{ rotate: open ? 180 : 0 }} className="inline-flex shrink-0">
+              <m.span
+                animate={{ rotate: open ? 180 : 0 }}
+                className="inline-flex shrink-0"
+              >
                 <ChevronUp className="size-5 text-ink/70" />
               </m.span>
             </button>

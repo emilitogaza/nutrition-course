@@ -17,7 +17,10 @@ export default function CourseLayout({ children }: { children: React.ReactNode }
       {/* Desktop chapter rail */}
       <aside className="sticky top-0 hidden h-dvh w-72 shrink-0 flex-col lg:flex">
         <div className="flex items-center justify-between py-5 pl-6 pr-4">
-          <Link href="/" className="flex items-center gap-2 text-base font-semibold text-brand-ink">
+          <Link
+            href="/"
+            className="flex items-center gap-2 text-base font-semibold text-brand-ink"
+          >
             <BookOpen className="size-5 text-brand" />
             Fuel Lab
           </Link>

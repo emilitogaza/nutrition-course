@@ -28,7 +28,8 @@ function FrozenRouter({ children }: { children: React.ReactNode }) {
   const segment = useSelectedLayoutSegment();
   const prevSegment = usePreviousValue(segment);
 
-  const changed = segment !== prevSegment && segment !== undefined && prevSegment !== undefined;
+  const changed =
+    segment !== prevSegment && segment !== undefined && prevSegment !== undefined;
 
   return (
     <LayoutRouterContext.Provider value={changed ? prevContext : context}>
