@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { CourseSidebar } from "@/components/course-sidebar";
+import { ThemeToggle } from "@/components/theme-toggle";
 import type { ChapterSection } from "@/lib/content";
 
 // Navigation remounts this tray (the layout subtree is rebuilt per route), so
@@ -146,28 +147,32 @@ export function MobileNav({ sections }: { sections: ChapterSection[] }) {
             />
           </div>
 
-          {/* Collapsed bar: current position + toggle */}
-          <button
-            type="button"
-            onClick={() => setOpen((v) => !v)}
-            aria-expanded={open}
-            aria-controls="mobile-chapter-panel"
-            aria-label={open ? "Close chapter menu" : "Open chapter menu"}
-            className="flex w-full items-center gap-3 px-4 py-3 text-left"
-          >
-            <span className="shrink-0 text-xs tabular-nums text-ink/50">
-              {index === -1 ? "—" : `${index + 1} / ${chapters.length}`}
-            </span>
-            <span className="min-w-0 flex-1 truncate text-sm text-ink">
-              {current?.title ?? "Course chapters"}
-            </span>
-            <m.span
-              animate={{ rotate: open ? 180 : 0 }}
-              className="inline-flex shrink-0"
+          {/* Collapsed bar: current position + expand toggle, with the
+              theme toggle as a sibling (buttons can't nest). */}
+          <div className="flex items-center pr-2">
+            <button
+              type="button"
+              onClick={() => setOpen((v) => !v)}
+              aria-expanded={open}
+              aria-controls="mobile-chapter-panel"
+              aria-label={open ? "Close chapter menu" : "Open chapter menu"}
+              className="flex min-w-0 flex-1 items-center gap-3 px-4 py-3 text-left"
             >
-              <ChevronUp className="size-5 text-ink/70" />
-            </m.span>
-          </button>
+              <span className="shrink-0 text-xs tabular-nums text-ink/50">
+                {index === -1 ? "—" : `${index + 1} / ${chapters.length}`}
+              </span>
+              <span className="min-w-0 flex-1 truncate text-sm text-ink">
+                {current?.title ?? "Course chapters"}
+              </span>
+              <m.span
+                animate={{ rotate: open ? 180 : 0 }}
+                className="inline-flex shrink-0"
+              >
+                <ChevronUp className="size-5 text-ink/70" />
+              </m.span>
+            </button>
+            <ThemeToggle />
+          </div>
         </div>
       </div>
     </div>

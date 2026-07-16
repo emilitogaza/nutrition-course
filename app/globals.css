@@ -1,43 +1,25 @@
 @import "tailwindcss";
 
+/* Enable class-based dark mode: `dark:` utilities apply under a `.dark` root. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-    /* Blue */
-    --color-blue-50: hsl(212, 56%, 97%);
-    --color-blue-100: hsl(213, 51%, 92%);
-    --color-blue-200: hsl(213, 46%, 84%);
-    --color-blue-400: hsl(213, 70%, 55%);
-    --color-blue-500: hsl(213, 85%, 45%);
-    --color-blue-600: hsl(213, 80%, 38%);
-    --color-blue-700: hsl(213, 70%, 28%);
-    --color-blue-800: hsl(213, 62%, 22%);
-    --color-blue-900: hsl(213, 58%, 16%);
-    --color-blue-950: hsl(215, 57%, 5%);
+    /* Red — the raw palette. Semantic tokens below map onto these per theme. */
+    --color-red-50: hsl(6, 60%, 97%);
+    --color-red-100: hsl(6, 58%, 93%);
+    --color-red-200: hsl(6, 56%, 85%);
+    --color-red-400: hsl(5, 78%, 62%);
+    --color-red-500: hsl(4, 82%, 52%);
+    --color-red-600: hsl(4, 74%, 44%);
+    --color-red-700: hsl(5, 70%, 34%);
+    --color-red-800: hsl(6, 64%, 25%);
+    --color-red-900: hsl(7, 60%, 14%);
+    --color-red-950: hsl(8, 55%, 4%);
 
     /* Error */
     --color-error-100: hsl(350, 80%, 95%);
     --color-error-500: hsl(355, 90%, 55%);
     --color-error-900: hsl(350, 80%, 10%);
-
-    /* Semantic color tokens */
-    /* Base */
-    --color-ink: var(--color-blue-900);
-    --color-ink-dim: var(--color-blue-800);
-    --color-ink-flip: var(--color-blue-50);
-    --color-fill: var(--color-blue-50);
-    --color-fill-raised: var(--color-blue-100);
-    --color-fill-dark: var(--color-blue-900);
-
-    /* Brand */
-    --color-brand-ink: var(--color-blue-900);
-    --color-brand-ink-flip: var(--color-blue-50);
-    --color-brand: var(--color-blue-500);
-    --color-brand-fill: var(--color-blue-900);
-
-    /* Misc */
-    --color-border: var(--color-blue-200);
-    --color-error-ink: var(--color-error-500);
-    --color-error: var(--color-error-500);
-    --color-error-fill: var(--color-error-900);
 
     --radius-0: 0rem;
     --radius-1: 0.25rem; /* 4px  */
@@ -97,6 +79,88 @@
     --animate-fade-in: fade-in 300ms ease-out both;
 }
 
+/* Semantic color tokens resolve through these `--sem-*` runtime variables so a
+   `.dark` root can swap the whole palette. `@theme inline` inlines each value
+   into its utility (e.g. `bg-fill` → `var(--sem-fill)`), which is what lets the
+   `.dark` override win at the element instead of freezing at `:root`. */
+@theme inline {
+    /* Base */
+    --color-ink: var(--sem-ink);
+    --color-ink-dim: var(--sem-ink-dim);
+    --color-ink-flip: var(--sem-ink-flip);
+    --color-fill: var(--sem-fill);
+    --color-fill-raised: var(--sem-fill-raised);
+    --color-fill-dark: var(--sem-fill-dark);
+
+    /* Brand */
+    --color-brand-ink: var(--sem-brand-ink);
+    --color-brand-ink-flip: var(--sem-brand-ink-flip);
+    --color-brand: var(--sem-brand);
+    --color-brand-fill: var(--sem-brand-fill);
+
+    /* Misc */
+    --color-border: var(--sem-border);
+    --color-link: var(--sem-link);
+    --color-error-ink: var(--sem-error-ink);
+    --color-error: var(--sem-error);
+    --color-error-fill: var(--sem-error-fill);
+}
+
+/* Light theme (default) */
+:root {
+    color-scheme: light;
+
+    --sem-ink: var(--color-red-900);
+    --sem-ink-dim: var(--color-red-800);
+    --sem-ink-flip: var(--color-red-50);
+    --sem-fill: var(--color-red-50);
+    --sem-fill-raised: var(--color-red-100);
+    --sem-fill-dark: var(--color-red-900);
+
+    --sem-brand-ink: var(--color-red-900);
+    --sem-brand-ink-flip: var(--color-red-50);
+    --sem-brand: var(--color-red-500);
+    --sem-brand-fill: var(--color-red-900);
+
+    --sem-border: var(--color-red-200);
+    --sem-link: var(--color-red-600);
+    --sem-error-ink: var(--color-error-500);
+    --sem-error: var(--color-error-500);
+    --sem-error-fill: var(--color-error-900);
+
+    /* Scrollbar thumb, tuned per theme */
+    --scrollbar: var(--color-red-200);
+    --scrollbar-hover: var(--color-red-400);
+}
+
+/* Dark theme */
+.dark {
+    color-scheme: dark;
+
+    --sem-ink: var(--color-red-50);
+    --sem-ink-dim: var(--color-red-200);
+    /* Text on brand/error surfaces stays light — those surfaces are mid reds
+       in both themes, so this does not flip with the rest of the palette. */
+    --sem-ink-flip: var(--color-red-50);
+    --sem-fill: var(--color-red-950);
+    --sem-fill-raised: var(--color-red-900);
+    --sem-fill-dark: var(--color-red-950);
+
+    --sem-brand-ink: var(--color-red-50);
+    --sem-brand-ink-flip: var(--color-red-900);
+    --sem-brand: var(--color-red-500);
+    --sem-brand-fill: var(--color-red-100);
+
+    --sem-border: var(--color-red-800);
+    --sem-link: var(--color-red-400);
+    --sem-error-ink: var(--color-error-500);
+    --sem-error: var(--color-error-500);
+    --sem-error-fill: var(--color-error-900);
+
+    --scrollbar: var(--color-red-800);
+    --scrollbar-hover: var(--color-red-700);
+}
+
 /* Base styles */
 html {
     scroll-behavior: smooth;
@@ -107,7 +171,7 @@ html {
    Safari, where the standard properties aren't supported yet. */
 * {
     scrollbar-width: thin;
-    scrollbar-color: var(--color-blue-200) transparent;
+    scrollbar-color: var(--scrollbar) transparent;
 }
 
 ::-webkit-scrollbar {
@@ -121,18 +185,16 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--color-blue-200);
+    background-color: var(--scrollbar);
     border-radius: var(--radius-full);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--color-blue-400);
+    background-color: var(--scrollbar-hover);
 }
 
 body {
-    @apply font-[550] font-stretch-110% tracking-wide;
-    background-color: var(--color-fill);
-    color: var(--color-ink);
+    @apply font-[550] font-stretch-110% tracking-wide bg-fill text-ink;
     font-family: var(--font-secondary), sans-serif;
 }
 
@@ -283,7 +345,7 @@ h6 {
     }
 
     a {
-        @apply font-semibold leading-[1.4] text-blue-600 underline-offset-3 decoration-2 decoration-blue-600/40 hover:decoration-blue-600 transition-colors hover:underline;
+        @apply font-semibold leading-[1.4] text-link underline-offset-3 decoration-2 decoration-link/40 hover:decoration-link transition-colors hover:underline;
     }
 
     img {

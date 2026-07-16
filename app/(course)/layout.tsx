@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CourseSidebar } from "@/components/course-sidebar";
 import { MobileNav } from "@/components/mobile-nav";
 import { PageTransition } from "@/components/page-transition";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { getSidebarSections } from "@/lib/content";
 
 // The documentation shell shared by every chapter: a persistent left rail on
@@ -19,13 +20,16 @@ export default function CourseLayout({
     <div className="mx-auto flex w-full max-w-[90rem] flex-1">
       {/* Desktop chapter rail */}
       <aside className="sticky top-0 hidden h-dvh w-72 shrink-0 flex-col lg:flex">
-        <Link
-          href="/"
-          className="flex items-center gap-2 px-6 py-5 text-base font-semibold text-brand-ink"
-        >
-          <BookOpen className="size-5 text-brand" />
-          Fuel Lab
-        </Link>
+        <div className="flex items-center justify-between py-5 pl-6 pr-4">
+          <Link
+            href="/"
+            className="flex items-center gap-2 text-base font-semibold text-brand-ink"
+          >
+            <BookOpen className="size-5 text-brand" />
+            Fuel Lab
+          </Link>
+          <ThemeToggle />
+        </div>
         <div className="flex-1 overflow-y-auto px-4 py-6">
           <CourseSidebar sections={sections} />
         </div>
