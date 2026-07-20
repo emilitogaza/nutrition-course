@@ -8,6 +8,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { CourseSidebar } from "@/components/course-sidebar";
 import { ThemeToggle } from "@/components/theme-toggle";
 import type { ChapterSection } from "@/lib/content";
+import { cn } from "@/lib/utils";
 
 // Navigation remounts this tray (the layout subtree is rebuilt per route), so
 // component state can't carry the progress value across chapters. We stash the
@@ -81,14 +82,14 @@ export function MobileNav({ sections }: { sections: ChapterSection[] }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 bg-fill-dark/40"
+            className="fixed inset-0 z-40 bg-fill-dark/60 easeOut backdrop-blur-sm backdrop-brightness-50"
           />
         )}
       </AnimatePresence>
 
       {/* The tray itself — follows the viewport, clear of the home indicator */}
       <div className="fixed inset-x-0 bottom-0 z-50 px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
-        <div className="overflow-hidden rounded-4 bg-fill/95 shadow-xl backdrop-blur">
+        <div className="overflow-hidden rounded-4 bg-fill/95 shadow-xl backdrop-blur outline-2 outline-brand/5">
           <AnimatePresence initial={false}>
             {open && (
               <m.div
@@ -107,7 +108,7 @@ export function MobileNav({ sections }: { sections: ChapterSection[] }) {
                     className="flex items-center gap-2 text-sm font-semibold text-brand-ink"
                   >
                     <BookOpen className="size-4 text-brand" />
-                    Psoriasis &amp; PsA
+                    Fuel Lab
                   </Link>
                   <button
                     type="button"
@@ -150,7 +151,7 @@ export function MobileNav({ sections }: { sections: ChapterSection[] }) {
               aria-expanded={open}
               aria-controls="mobile-chapter-panel"
               aria-label={open ? "Close chapter menu" : "Open chapter menu"}
-              className="flex min-w-0 flex-1 items-center gap-3 px-4 py-3 text-left"
+              className="flex min-w-0 flex-1 items-center gap-3 px-4 py-4 text-left"
             >
               <span className="shrink-0 text-xs tabular-nums text-ink/50">
                 {index === -1 ? "—" : `${index + 1} / ${chapters.length}`}
