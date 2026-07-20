@@ -67,6 +67,10 @@ ratio.
   plant ALA (flax, chia) converts to EPA/DHA only poorly, so it's not a full
   substitute.
 
+The next chapter takes omega-3 apart properly — what the big cardiovascular
+trials found, the atrial fibrillation signal, the effects on muscle and recovery,
+and how to buy a supplement that isn't rancid.
+
 ## The takeaway
 
 - Fat is **essential** for hormones, membranes, and vitamin absorption — don't

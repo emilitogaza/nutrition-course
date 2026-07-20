@@ -32,6 +32,9 @@ work, and that extra work drives more adaptation over time.
   safe long-term in healthy people; it does **not** harm kidneys. Works whether
   taken pre- or post-workout — consistency matters more than timing.
 
+Creatine gets a **dedicated chapter** next — forms, dosing by body size,
+non-responders, the safety myths, and the brain research.
+
 ## Caffeine — reliable across almost everything
 
 Caffeine is a genuine, broad-spectrum ergogenic — it improves endurance, power,

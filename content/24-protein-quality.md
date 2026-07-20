@@ -78,6 +78,10 @@ it. Its real advantages are practicality (a shake is faster than cooking) and
 cost per gram. Whey isolate is the default; casein for a slow option; soy or
 pea+rice for plant-based.
 
+The next chapter covers the products themselves — **Whey-80 vs Whey-100**, what
+the labels actually mean, and how to compare everything on **kronor per gram of
+protein**.
+
 ## The takeaway
 
 - **DIAAS** is the modern quality metric; **whey, dairy, egg, and meat** top it.
