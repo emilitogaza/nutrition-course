@@ -5,16 +5,16 @@
 
 @theme {
     /* Red — the raw palette. Semantic tokens below map onto these per theme. */
-    --color-red-50: hsl(6, 60%, 97%);
-    --color-red-100: hsl(6, 58%, 93%);
-    --color-red-200: hsl(6, 56%, 85%);
-    --color-red-400: hsl(5, 78%, 62%);
-    --color-red-500: hsl(4, 82%, 52%);
-    --color-red-600: hsl(4, 74%, 44%);
-    --color-red-700: hsl(5, 70%, 34%);
-    --color-red-800: hsl(6, 64%, 25%);
-    --color-red-900: hsl(7, 60%, 14%);
-    --color-red-950: hsl(8, 55%, 4%);
+    --color-orange-50: hsl(10, 60%, 97%);
+    --color-orange-100: hsl(10, 58%, 93%);
+    --color-orange-200: hsl(10, 56%, 85%);
+    --color-orange-400: hsl(10, 78%, 62%);
+    --color-orange-500: hsl(10, 82%, 52%);
+    --color-orange-600: hsl(10, 74%, 44%);
+    --color-orange-700: hsl(10, 70%, 34%);
+    --color-orange-800: hsl(10, 64%, 25%);
+    --color-orange-900: hsl(10, 60%, 11%);
+    --color-orange-950: hsl(10, 55%, 4%);
 
     /* Error */
     --color-error-100: hsl(350, 80%, 95%);
@@ -110,55 +110,55 @@
 :root {
     color-scheme: light;
 
-    --sem-ink: var(--color-red-900);
-    --sem-ink-dim: var(--color-red-800);
-    --sem-ink-flip: var(--color-red-50);
-    --sem-fill: var(--color-red-50);
-    --sem-fill-raised: var(--color-red-100);
-    --sem-fill-dark: var(--color-red-900);
+    --sem-ink: var(--color-orange-900);
+    --sem-ink-dim: var(--color-orange-800);
+    --sem-ink-flip: var(--color-orange-50);
+    --sem-fill: var(--color-orange-50);
+    --sem-fill-raised: var(--color-orange-100);
+    --sem-fill-dark: var(--color-orange-900);
 
-    --sem-brand-ink: var(--color-red-900);
-    --sem-brand-ink-flip: var(--color-red-50);
-    --sem-brand: var(--color-red-500);
-    --sem-brand-fill: var(--color-red-900);
+    --sem-brand-ink: var(--color-orange-900);
+    --sem-brand-ink-flip: var(--color-orange-50);
+    --sem-brand: var(--color-orange-500);
+    --sem-brand-fill: var(--color-orange-900);
 
-    --sem-border: var(--color-red-200);
-    --sem-link: var(--color-red-600);
+    --sem-border: var(--color-orange-200);
+    --sem-link: var(--color-orange-600);
     --sem-error-ink: var(--color-error-500);
     --sem-error: var(--color-error-500);
     --sem-error-fill: var(--color-error-900);
 
     /* Scrollbar thumb, tuned per theme */
-    --scrollbar: var(--color-red-200);
-    --scrollbar-hover: var(--color-red-400);
+    --scrollbar: var(--color-orange-200);
+    --scrollbar-hover: var(--color-orange-400);
 }
 
 /* Dark theme */
 .dark {
     color-scheme: dark;
 
-    --sem-ink: var(--color-red-50);
-    --sem-ink-dim: var(--color-red-200);
+    --sem-ink: var(--color-orange-50);
+    --sem-ink-dim: var(--color-orange-200);
     /* Text on brand/error surfaces stays light — those surfaces are mid reds
        in both themes, so this does not flip with the rest of the palette. */
-    --sem-ink-flip: var(--color-red-50);
-    --sem-fill: var(--color-red-950);
-    --sem-fill-raised: var(--color-red-900);
-    --sem-fill-dark: var(--color-red-950);
+    --sem-ink-flip: var(--color-orange-50);
+    --sem-fill: var(--color-orange-950);
+    --sem-fill-raised: var(--color-orange-900);
+    --sem-fill-dark: var(--color-orange-950);
 
-    --sem-brand-ink: var(--color-red-50);
-    --sem-brand-ink-flip: var(--color-red-900);
-    --sem-brand: var(--color-red-500);
-    --sem-brand-fill: var(--color-red-100);
+    --sem-brand-ink: var(--color-orange-50);
+    --sem-brand-ink-flip: var(--color-orange-900);
+    --sem-brand: var(--color-orange-500);
+    --sem-brand-fill: var(--color-orange-100);
 
-    --sem-border: var(--color-red-800);
-    --sem-link: var(--color-red-400);
+    --sem-border: var(--color-orange-800);
+    --sem-link: var(--color-orange-400);
     --sem-error-ink: var(--color-error-500);
     --sem-error: var(--color-error-500);
     --sem-error-fill: var(--color-error-900);
 
-    --scrollbar: var(--color-red-800);
-    --scrollbar-hover: var(--color-red-700);
+    --scrollbar: var(--color-orange-800);
+    --scrollbar-hover: var(--color-orange-700);
 }
 
 /* Base styles */
@@ -345,7 +345,7 @@ h6 {
     }
 
     a {
-        @apply font-semibold leading-[1.4] text-link underline-offset-3 decoration-2 decoration-link/40 hover:decoration-link transition-colors hover:underline;
+        @apply font-semibold leading-[1.4] text-link underline-offset-3 text-pretty decoration-2 decoration-link/40 hover:decoration-link transition-colors hover:underline;
     }
 
     img {
