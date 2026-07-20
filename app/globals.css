@@ -164,6 +164,7 @@
 /* Base styles */
 html {
     scroll-behavior: smooth;
+    @apply bg-fill;
 }
 
 /* Custom scrollbar — themed thumb on a transparent track, like nextjs.org.

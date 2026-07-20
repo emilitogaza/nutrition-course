@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Mona_Sans } from "next/font/google";
 import { MotionProvider } from "@/components/motion-provider";
 import "./globals.css";
@@ -19,6 +19,14 @@ const SITE_NAME = "Fuel Lab";
 const SITE_TITLE = "Fuel Lab — nutritional science for athletes";
 const SITE_DESCRIPTION =
   "An evidence-based course on nutritional science — protein and amino acids, vitamins and supplements, fuelling performance, and losing fat while keeping muscle. Built for athletes, from the fundamentals to the current research.";
+
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "hsl(10, 60%, 97%)" },
+    { media: "(prefers-color-scheme: dark)", color: "hsl(10, 55%, 4%)" },
+  ],
+};
 
 export const metadata: Metadata = {
   title: {
